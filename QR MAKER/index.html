@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinktoQRMaker - Convert Links to QR Codes Instantly</title>
+    <meta name="description" content="Convert any website link to a scannable QR code instantly. Free online QR code generator for URLs. Create QR codes for websites, social media, and more.">
+    <meta name="keywords" content="QR code generator, link to QR, URL to QR code, free QR generator, website QR code">
+    <meta name="author" content="LinktoQRMaker">
+    <meta property="og:title" content="LinktoQRMaker - Convert Links to QR Codes Instantly">
+    <meta property="og:description" content="Convert any website link to a scannable QR code instantly. Free online QR code generator.">
+    <meta property="og:url" content="https://linktoqrmaker.com">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://linktoqrmaker.com">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>LinktoQRMaker</h1>
+            <p>Convert any website link to a QR code instantly!</p>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <input 
+                    type="url" 
+                    id="urlInput" 
+                    placeholder="https://linktoqrmaker.com"
+                    autocomplete="off"
+                >
+                <button id="generateBtn" type="button">Generate QR Code</button>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+        
+        <div class="qr-section" id="qrSection">
+            <div class="qr-container">
+                <div id="qrcode"></div>
+            </div>
+            <div class="qr-actions">
+                <button id="downloadBtn" type="button">Download QR Code</button>
+                <button id="clearBtn" type="button">Clear</button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Scan the QR code with your phone to visit the website</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #a0aec0;">
+                <strong>LinktoQRMaker</strong> - linktoqrmaker.com
+            </p>
+        </div>
+    </div>
+    
+    <script src="qrcode-lib.js"></script>
+    <script src="qr-working.js"></script>
+</body>
+</html>
