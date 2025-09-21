@@ -7,60 +7,124 @@
     <meta name="description" content="Convert any website link to a scannable QR code instantly. Free online QR code generator for URLs. Create QR codes for websites, social media, and more.">
     <meta name="keywords" content="QR code generator, link to QR, URL to QR code, free QR generator, website QR code">
     <meta name="author" content="LinktoQRMaker">
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="LinktoQRMaker - Convert Links to QR Codes Instantly">
     <meta property="og:description" content="Convert any website link to a scannable QR code instantly. Free online QR code generator.">
     <meta property="og:url" content="https://linktoqrmaker.com">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://linktoqrmaker.com/og-image.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LinktoQRMaker - Convert Links to QR Codes Instantly">
+    <meta name="twitter:description" content="Convert any website link to a scannable QR code instantly. Free online QR code generator.">
+    <meta name="twitter:image" content="https://linktoqrmaker.com/twitter-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
     <link rel="canonical" href="https://linktoqrmaker.com">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "LinktoQRMaker",
+      "url": "https://linktoqrmaker.com",
+      "description": "Convert any website link to a scannable QR code instantly. Free online QR code generator for URLs.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "LinktoQRMaker"
+      }
+    }
+    </script>
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-07NYEPMQW6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-07NYEPMQW6');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07NYEPMQW6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-07NYEPMQW6');
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>LinktoQRMaker</h1>
-            <p>Convert any website link to a QR code instantly!</p>
-        </div>
-        
-        <div class="input-section">
+    <!-- Add semantic HTML5 elements -->
+    <header>
+        <h1>LinktoQRMaker</h1>
+        <p>Convert any website link to a QR code instantly!</p>
+    </header>
+    
+    <main class="container">
+        <section class="input-section" aria-label="QR Code Generator Input">
             <div class="input-group">
+                <label for="urlInput" class="visually-hidden">Enter website URL</label>
                 <input 
                     type="url" 
                     id="urlInput" 
                     placeholder="https://linktoqrmaker.com"
                     autocomplete="off"
+                    aria-label="Website URL"
                 >
                 <button id="generateBtn" type="button">Generate QR Code</button>
             </div>
-            <div class="error-message" id="errorMessage"></div>
-        </div>
+            <div class="error-message" id="errorMessage" role="alert" aria-live="polite"></div>
+        </section>
         
-        <div class="qr-section" id="qrSection">
+        <section class="qr-section" id="qrSection" aria-label="Generated QR Code">
             <div class="qr-container">
-                <div id="qrcode"></div>
+                <div id="qrcode" role="img" aria-label="Generated QR Code"></div>
             </div>
             <div class="qr-actions">
                 <button id="downloadBtn" type="button">Download QR Code</button>
                 <button id="clearBtn" type="button">Clear</button>
             </div>
-        </div>
+        </section>
         
-        <div class="footer">
-            <p>Scan the QR code with your phone to visit the website</p>
-            <p style="margin-top: 10px; font-size: 0.8rem; color: #a0aec0;">
-                <strong>LinktoQRMaker</strong> - linktoqrmaker.com
-            </p>
-        </div>
-    </div>
+        <!-- Add informational content for SEO -->
+        <article class="info-section" style="margin-top: 3rem; text-align: left;">
+            <h2>How to Create a QR Code from a Link</h2>
+            <p>Creating a QR code from any website link is simple with LinktoQRMaker. Just paste your URL above and click "Generate QR Code" to create a scannable QR code instantly.</p>
+            
+            <h3>Why Use QR Codes?</h3>
+            <ul>
+                <li>Quick access to websites without typing URLs</li>
+                <li>Perfect for marketing materials and business cards</li>
+                <li>Share social media profiles easily</li>
+                <li>Bridge offline and online content seamlessly</li>
+            </ul>
+            
+            <h3>Features</h3>
+            <ul>
+                <li>100% free QR code generator</li>
+                <li>Instant QR code creation</li>
+                <li>Download QR codes as images</li>
+                <li>No registration required</li>
+                <li>Works with any valid URL</li>
+            </ul>
+        </article>
+    </main>
+    
+    <footer class="footer">
+        <p>Scan the QR code with your phone to visit the website</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #a0aec0;">
+            <strong>LinktoQRMaker</strong> - linktoqrmaker.com | Free QR Code Generator
+        </p>
+    </footer>
     
     <script src="qrcode-lib.js"></script>
     <script src="qr-working.js"></script>
